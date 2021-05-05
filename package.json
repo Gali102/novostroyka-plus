@@ -1,0 +1,55 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "npm run development",
+        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "watch": "npm run development -- --watch",
+        "watch-poll": "npm run watch -- --watch-poll",
+        "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "prod": "npm run production",
+        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.10.5",
+        "@babel/plugin-transform-runtime": "^7.5.5",
+        "@babel/preset-env": "^7.5.5",
+        "@tailwindcss/custom-forms": "^0.2.0",
+        "@vue/test-utils": "^1.0.0-beta.29",
+        "axios": "^0.19",
+        "cross-env": "^5.2.1",
+        "laravel-mix": "^5.0.1",
+        "lodash": "^4.17.19",
+        "resolve-url-loader": "^2.3.1",
+        "sass": "^1.15.2",
+        "sass-loader": "^8.0.0",
+        "vue": "^2.5.7",
+        "vue-jest": "^3.0.4",
+        "vue-template-compiler": "^2.5.21"
+    },
+    "dependencies": {
+        "@babel/compat-data": "^7.10.5",
+        "@shopify/draggable": "^1.0.0-beta.8",
+        "babel-polyfill": "^6.26.0",
+        "growly": "^1.3.0",
+        "in-viewport": "^3.6.0",
+        "portal-vue": "^2.1.6",
+        "vue-js-modal": "^2.0.0-rc.6",
+        "vue-notification": "^1.3.13",
+        "vue-router": "^3.1.2",
+        "vue-select": "^3.10.3",
+        "vue-yandex-maps": "^0.8.17",
+        "vuex": "^3.0.1"
+    },
+    "jest": {
+        "testRegex": "resources/js/.*.spec.js$",
+        "moduleFileExtensions": [
+            "js",
+            "json",
+            "vue"
+        ],
+        "transform": {
+            ".*\\.(vue)$": "vue-jest",
+            "^.+\\.js$": "<rootDir>/node_modules/babel-jest"
+        }
+    }
+}
